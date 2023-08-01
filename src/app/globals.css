@@ -1,27 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Righteous&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  font-family: "Poppins" !important;
+  font-style: normal;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+html,
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #f9f9f9;
+}
+
+img {
+  object-fit: cover;
+}
+
+.rnc__notification-container--top-right {
+  position: fixed !important;
+  top: 80px !important;
+  right: 16px !important;
+}
+
+.scroll-hidden {
+  overflow-y: hidden;
+}
+
+.swiper-slide {
+  width: fit-content !important;
+}
+.swiper {
+  position: unset !important;
+}
+.swiper-pagination-fraction {
+  position: absolute !important;
+  bottom: 16px !important;
+  right: 16px !important;
+  left: unset !important;
+
+  width: fit-content !important;
+  background: #1d1d1dd0;
+  color: #fff;
+
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.swiper-gallery .swiper-button-prev,
+.swiper-gallery .swiper-button-next {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background-color: #8334d2;
+}
+.swiper-gallery .swiper-button-prev::after,
+.swiper-gallery .swiper-button-next::after {
+  font-size: 16px;
+  color: #fff;
+}
+
+.backdrop-blur-24 {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.swiper-gallery-mobile .swiper-slide {
+  height: 35vh !important;
+  width: 100% !important;
+}
+
+.swiper-gallery-mobile .swiper-pagination-fraction {
+  right: 8px !important;
+  bottom: 8px !important;
+  z-index: 10 !important;
+}
+
+.bg-wrapper {
+  background: url("/bg.png") repeat #fdfdfd;
+  background-size: 9px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #374151;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #374151;
 }
