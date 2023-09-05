@@ -33,7 +33,7 @@ export default async function Page({ params }: { params: { id: string } }) {
             <div className='grid md:grid-cols-4 gap-4'>
                 {results?.map((item: IDistrict) =>
                     <div key={item.id} className="p-3 bg-white border rounded-md flex justify-between items-center hover:shadow-sm text-sm">
-                        {item.name}
+                        {item.id} - {item.name}
                         <div className="flex gap-1">
                             <ModalUpdateDistrict district={item} />
                             <ModalRemoveDistrict district={item} />
